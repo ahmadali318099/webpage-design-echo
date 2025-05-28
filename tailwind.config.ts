@@ -18,14 +18,33 @@ export default {
 			}
 		},
 		extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'], // Set Inter as the default sans-serif font
+      },
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
+				background: 'hsl(var(--background))', // Main background, typically white
+				foreground: 'hsl(var(--foreground))', // Main text color
+        'gh-blue': {
+          DEFAULT: '#00A9C0', // Primary teal/blue from buttons
+          'dark': '#008A9E', // Darker shade for hover
+        },
+        'gh-gray': {
+          '50': '#F9FAFB',
+          '100': '#F3F4F6',
+          '200': '#E5E7EB',
+          '300': '#D1D5DB',
+          '400': '#9CA3AF',
+          '500': '#6B7280', // Used for placeholder text or secondary info
+          '600': '#4B5563', // Used for body text
+          '700': '#374151', // Used for subheadings
+          '800': '#1F2937', // Used for main headings
+          '900': '#111827', // Very dark, almost black
+        },
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
+					DEFAULT: 'hsl(var(--primary))', // Default primary, can be overridden by gh-blue
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
@@ -49,8 +68,8 @@ export default {
 					foreground: 'hsl(var(--popover-foreground))'
 				},
 				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
+					DEFAULT: 'hsl(var(--card))', // Card background
+					foreground: 'hsl(var(--card-foreground))' // Card text
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -64,9 +83,11 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: 'var(--radius)', // 0.5rem
+				md: 'calc(var(--radius) - 2px)', // 0.375rem
+				sm: 'calc(var(--radius) - 4px)', // 0.25rem
+        xl: 'calc(var(--radius) + 4px)', // 0.75rem
+        '2xl': 'calc(var(--radius) + 8px)', // 1rem
 			},
 			keyframes: {
 				'accordion-down': {

@@ -1,10 +1,11 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
+
+import { Toaster } from "@/components/ui/toaster"; // Keep for potential shadcn toast usage
+import { Toaster as Sonner } from "@/components/ui/sonner"; // Keep for potential sonner toast usage
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/NotFound"; // Good to have a 404 page
 
 const queryClient = new QueryClient();
 
