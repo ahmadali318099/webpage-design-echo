@@ -11,19 +11,19 @@ const Footer = () => {
       { name: 'Policy FAQs', href: '#' },
       { name: 'Technical Support', href: '#' },
     ],
-    Products: [ // Changed 'Product' to 'Products' to match image more closely
+    Products: [
       { name: 'Lorem ipsum', href: '#' },
       { name: 'Lorem ipsum', href: '#' },
       { name: 'Lorem ipsum', href: '#' },
       { name: 'Lorem ipsum', href: '#' },
     ],
     Resource: [
-      { name: 'About us', href: '#' }, // Added 'About us' as it's common
+      { name: 'About us', href: '#' },
       { name: 'Offers', href: '#' },
-      { name: 'Partners', href: '#' }, // Added 'Partners'
+      { name: 'Partners', href: '#' },
       { name: 'Blog', href: '#' },
     ],
-    Community: [ // Changed 'Comunity' to 'Community'
+    Community: [
       { name: 'Lorem ipsum', href: '#' },
       { name: 'Lorem ipsum', href: '#' },
       { name: 'Lorem ipsum', href: '#' },
@@ -32,7 +32,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gh-gray-900 text-gh-gray-300">
+    <footer className="bg-black text-gh-gray-300"> {/* Changed bg-gh-gray-900 to bg-black */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2 mb-8 md:mb-0">
@@ -63,7 +63,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-sm hover:text-gh-blue transition-colors">
+                    <a href={link.href} className="text-sm text-gh-gray-300 hover:text-gh-blue transition-colors"> {/* Ensured text color for links */}
                       {link.name}
                     </a>
                   </li>
@@ -73,7 +73,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className="bg-gh-gray-800 py-6">
+      <div className="bg-gh-gray-900 py-6"> {/* Changed bg-gh-gray-800 to bg-gh-gray-900 */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm text-gh-gray-400">
             Copyright &copy; {new Date().getFullYear()} GenuineHire. All rights reserved.
