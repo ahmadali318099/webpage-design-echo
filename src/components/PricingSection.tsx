@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PricingCard from './PricingCard';
 
@@ -48,12 +47,12 @@ const PricingSection = () => {
   return (
     <section className="bg-gh-gray-50 py-20 md:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* <div className="text-center mb-16">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gh-gray-800">Flexible Pricing for Teams of All Sizes</h2>
           <p className="mt-4 text-lg text-gh-gray-600 max-w-2xl mx-auto">
             Choose the plan that’s right for you. No hidden fees, cancel anytime.
           </p>
-        </div> */}
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pricingPlans.map((plan) => (
             <PricingCard key={plan.planName} {...plan} />

@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import PricingSection from '@/components/PricingSection';
+import BookADemo from '@/components/BookADemo';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -10,6 +11,7 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <PricingSection />
+        <BookADemo />
         {/* Other sections like Contact, Reviews, TrustedBy will be added here later */}
       </main>
       <Footer />
